@@ -131,6 +131,8 @@
     [manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *responseDictionary = responseObject;
         NSArray *venues = responseDictionary[@"response"][@"venues"];
+        NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"name"  ascending:YES];
+        venues = [venues sortedArrayUsingDescriptors:[NSArray arrayWithObjects:descriptor,nil]];
         
         [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
             for (NSDictionary *venue in venues) {
