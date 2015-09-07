@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Aub-z6-sEV">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Pizza Places Nearby-->
+        <scene sceneID="Sfb-YS-qnf">
+            <objects>
+                <tableViewController id="CO1-85-w7U" customClass="MasterViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Gfl-e3-zX5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="CO1-85-w7U" id="L0Q-Wf-y7v"/>
+                            <outlet property="delegate" destination="CO1-85-w7U" id="siI-VV-OAw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pizza Places Nearby" id="jlR-nO-IP5"/>
+                    <connections>
+                        <segue destination="KDz-2j-AqH" kind="show" identifier="ShowDetailView" id="IRB-fq-GyS"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6B6-PL-Qfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="-114"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="OAY-5n-5pF">
+            <objects>
+                <viewController id="KDz-2j-AqH" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1b5-AA-sAZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="eez-3Q-VnO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VWy-MH-fFY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AT-CF-rBa">
+                                <rect key="frame" x="133" y="192" width="334" height="216"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100 miles away" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtQ-Fk-mb7">
+                                        <rect key="frame" x="91" y="175" width="153" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1000 users checked in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHK-2o-ARn">
+                                        <rect key="frame" x="73" y="146" width="188" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="19 Old Fulton,St Brooklyn ,NY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoL-29-j7A">
+                                        <rect key="frame" x="14" y="67" width="306" height="71"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PizzaHut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUq-K3-fKe">
+                                        <rect key="frame" x="0.0" y="20" width="334" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="BEb-Jh-OjJ"/>
+                                    <constraint firstAttribute="width" constant="334" id="m3b-w6-mhs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="7AT-CF-rBa" secondAttribute="centerX" id="7KZ-6P-2As"/>
+                            <constraint firstAttribute="centerY" secondItem="7AT-CF-rBa" secondAttribute="centerY" id="dVl-4F-gVy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressLabel" destination="CoL-29-j7A" id="LbQ-hm-aYh"/>
+                        <outlet property="checkedinCountsLabel" destination="tHK-2o-ARn" id="Hc4-Od-zt5"/>
+                        <outlet property="distanceLabel" destination="gtQ-Fk-mb7" id="ANC-zM-YOl"/>
+                        <outlet property="nameLabel" destination="vUq-K3-fKe" id="BhT-nc-NXp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Yk-OV-W5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437" y="-116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eiR-2h-2uj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aub-z6-sEV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B3d-pf-58q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CO1-85-w7U" kind="relationship" relationship="rootViewController" id="9AN-AO-5O8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5D-d4-CvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="-114"/>
+        </scene>
+    </scenes>
+</document>
